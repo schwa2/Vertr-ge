@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Was ist ein fairer Vertrag?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f6fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .section {
+      display: none;
+      padding: 40px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-title {
+      font-weight: bold;
+      color: #34495e;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .card-content {
+      display: none;
+      margin-top: 15px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #eaf1f8;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      resize: vertical;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Seite 1 -->
+<div class="section active" id="page1">
+  <h1>📄 Was ist ein Vertrag?</h1>
+  <p>Ein Vertrag ist eine Vereinbarung zwischen zwei (oder mehr) Personen. Wenn beide Seiten sich einig sind, entsteht ein Vertrag.</p>
+  <p><strong>Ein Vertrag braucht:</strong><br>
+  ✉️ <strong>Angebot</strong> – jemand bietet etwas an<br>
+  ✅ <strong>Annahme</strong> – jemand sagt „Ja“ dazu<br>
+  🤝 <strong>Einigung</strong> – beide verstehen und wollen dasselbe<br>
+  👤 <strong>Geschäftsfähigkeit</strong> – man darf überhaupt Verträge abschließen</p>
+  <p><strong>Beispiel:</strong> Eine Schülerin meldet sich für ein Musikabo an – eine Woche kostenlos, danach 9,99€/Monat. Sie wusste nicht, dass es sich automatisch verlängert.</p>
+  <button class="btn" onclick="showPage(2)">➡️ Weiter zur Aufgabe</button>
+</div>
+
+<!-- Seite 2 -->
+<div class="section" id="page2">
+  <h1>🔍 Ist dieser Vertrag fair?</h1>
+  <p>Die Schülerin hat ein Musikabo abgeschlossen. Sie dachte, es sei nur kostenlos. Danach wurde Geld abgebucht. 👉 War das fair?</p>
+  <p>Jetzt erarbeitet ihr in der Gruppe vier Kriterien, die helfen, einen <strong>fairen Vertrag</strong> zu erkennen.</p>
+  <p><strong>So geht’s:</strong></p>
+  <ul>
+    <li>Jede*r liest ein anderes Kriterium.</li>
+    <li>Besprecht gemeinsam: Was bedeutet das? Was wäre ein gutes Beispiel?</li>
+    <li>Tragt eure Ergebnisse ins Arbeitsblatt ein.</li>
+    <li>Bereitet eine kurze Vorstellung eures Kriteriums vor.</li>
+  </ul>
+  <button class="btn" onclick="showPage(3)">➡️ Zu den Kriterien</button>
+</div>
+
+<!-- Seite 3 -->
+<div class="section" id="page3">
+  <h1>📌 Kriterien für einen fairen Vertrag</h1>
+  <div class="card-container">
+    <div class="card" onclick="toggleContent(this)">
+      <div class="card-title">Freiwilligkeit</div>
+      <div class="card-content">
+        Du solltest <strong>frei entscheiden</strong> können – ohne Tricks oder Druck.<br><br>
+        👉 Die Schülerin dachte, sie testet nur. Aber weil sie nicht wusste, dass es automatisch kostenpflichtig wird, war es keine echte Freiwilligkeit.
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+      <div class="card-title">Klarheit</div>
+      <div class="card-content">
+        Verträge müssen <strong>verständlich und deutlich</strong> sein – keine versteckten Regeln.<br><br>
+        👉 Die Info zur Verlängerung war klein und unauffällig. So konnte man sie leicht übersehen.
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+      <div class="card-title">Gleichgewicht</div>
+      <div class="card-content">
+        Beide Seiten sollten <strong>ähnlich viel bekommen</strong>. Sonst ist es unfair.<br><br>
+        👉 Der Anbieter gewinnt durch ein Missverständnis – die Schülerin verliert Geld. Kein gutes Gleichgewicht.
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+      <div class="card-title">Ehrlichkeit</div>
+      <div class="card-content">
+        Es muss <strong>offen und ehrlich</strong> gesagt werden, was wirklich gilt.<br><br>
+        👉 Der Anbieter hätte klar sagen müssen: "Das Abo verlängert sich automatisch."
+      </div>
+    </div>
+  </div>
+
+  <button class="btn" onclick="showPage(4)">➡️ Zur Zusammenfassung</button>
+</div>
+
+<!-- Seite 4 -->
+<div class="section" id="page4">
+  <h1>📝 Woran erkenne ich einen fairen Vertrag?</h1>
+  <table>
+    <tr>
+      <th>Kriterium</th>
+      <th>Was bedeutet das?</th>
+      <th>Beispiel aus dem Abo-Fall</th>
+    </tr>
+    <tr>
+      <td>Freiwilligkeit</td>
+      <td><textarea placeholder="Was heißt Freiwilligkeit beim Vertrag?"></textarea></td>
+      <td><textarea placeholder="Wie war das im Beispiel?"></textarea></td>
+    </tr>
+    <tr>
+      <td>Klarheit</td>
+      <td><textarea placeholder="Was bedeutet Klarheit im Vertrag?"></textarea></td>
+      <td><textarea placeholder="Wie war das im Beispiel?"></textarea></td>
+    </tr>
+    <tr>
+      <td>Gleichgewicht</td>
+      <td><textarea placeholder="Was meint Gleichgewicht beim Vertrag?"></textarea></td>
+      <td><textarea placeholder="Wie war das im Beispiel?"></textarea></td>
+    </tr>
+    <tr>
+      <td>Ehrlichkeit</td>
+      <td><textarea placeholder="Was heißt Ehrlichkeit bei Vertragsinfos?"></textarea></td>
+      <td><textarea placeholder="Wie war das im Beispiel?"></textarea></td>
+    </tr>
+  </table>
+</div>
+
+<script>
+  function showPage(n) {
+    document.querySelectorAll('.section').forEach((el, i) => {
+      el.classList.remove('active');
+      if (i === n - 1) el.classList.add('active');
+    });
+  }
+
+  function toggleContent(card) {
+    const content = card.querySelector('.card-content');
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
